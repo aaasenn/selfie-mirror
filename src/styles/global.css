@@ -12,4 +12,5 @@
 
 @theme {
     --font-sans: "Inter";
+    --color-primaryText: var(--color-yellow-50);
 }
