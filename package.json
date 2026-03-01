@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --host",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
@@ -12,7 +12,11 @@
     "@astrojs/vue": "^5.1.4",
     "@tailwindcss/vite": "^4.2.1",
     "astro": "^5.17.1",
+    "astro-icon": "^1.1.5",
     "tailwindcss": "^4.2.1",
     "vue": "^3.5.29"
+  },
+  "devDependencies": {
+    "vite-plugin-qrcode": "^0.3.0"
   }
 }

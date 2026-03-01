@@ -1,7 +1,38 @@
-<div class="min-h-screen w-full bg-linear-to-r from-purple-500 to-pink-500">
+---
+import Card from "./Card.astro";
+import Button from "./Button.vue";
+import OrderButton from "./OrderButton.vue";
+import background from "../assets/background.jpg";
+---
+
+<section class="min-h-screen w-full primary-gradient">
     <div
-        class="container min-h-screen mx-auto px-4 border border-solid border-t-amber-700"
+        class="container min-h-screen mx-auto px-4 flex items-center justify-center border border-solid border-t-amber-700"
     >
-        <h1 class="text-primaryText text-7xl">Селфи зеркало</h1>
+        <div
+            class="flex flex-col gap-6 max-w-4xl w-full text-center border border-solid border-t-emerald-900"
+        >
+            <h1 class="text-primaryText font-bold max-sm:text-4xl md:text-7xl">
+                Селфи зеркало <span class="text-yellow-300"
+                    >для вашего праздника</span
+                >
+            </h1>
+            <p class="max-sm:text-xl md:text-2xl text-primaryText">
+                Аренда интерактивных селфи-зеркал в Санкт-Петербурге и по всей
+                России. Незабываемые фото на свадьбах, корпоративах, днях
+                рождения и любых мероприятиях!
+            </p>
+
+            <div class="flex-center gap-2">
+                <OrderButton client:load />
+                <Button text="7982723838" variant="secondary" />
+            </div>
+
+            <div class="flex-center justify-between max-sm:flex-col">
+                <Card title="500+" description="проведенных мероприятий2" />
+                <Card title="5 лет" description="на рынке" />
+                <Card title="98%" description="довольных клиентов" />
+            </div>
+        </div>
     </div>
-</div>
+</section>

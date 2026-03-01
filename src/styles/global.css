@@ -14,3 +14,57 @@
     --font-sans: "Inter";
     --color-primaryText: var(--color-yellow-50);
 }
+
+@layer components {
+    .btn {
+        @apply rounded-full px-8 py-4 font-semibold cursor-pointer shadow-sm text-lg;
+    }
+
+    .btn-primary {
+        @apply bg-white text-purple-600 hover:scale-105 transition-all duration-300;
+    }
+
+    .btn-secondary {
+        @apply bg-transparent text-white border border-white rounded-full px-8 py-4 hover:bg-white/10 transition-colors duration-300;
+    }
+
+    .input {
+        @apply w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent;
+    }
+
+    .primary-gradient {
+        @apply bg-linear-to-r from-purple-500 to-pink-500;
+    }
+
+    .secondary-gradient {
+        @apply bg-linear-to-r from-purple-50 to-pink-50;
+    }
+
+    .section {
+        @apply w-full flex justify-center items-center py-20;
+    }
+
+    .section-container {
+        @apply container flex justify-center items-center flex-col text-center border border-cyan-300;
+    }
+
+    .h-secondary {
+        @apply md:text-5xl font-bold mb-4 text-gray-900;
+    }
+
+    .paragraph {
+        @apply text-xl text-gray-600;
+    }
+
+    .border-check {
+        @apply border border-solid border-yellow-400;
+    }
+
+    .advantage-card {
+        @apply bg-linear-to-br from-purple-50 to-pink-50 rounded-2xl p-8 border border-purple-100;
+    }
+
+    .flex-center {
+        @apply flex justify-center items-center;
+    }
+}

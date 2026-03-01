@@ -1,0 +1,23 @@
+---
+import AdvantageCardGeneral from "./AdvantageCardGeneral.astro";
+import AdvantageCardGroup from "./AdvantageCardGroup.astro";
+import ChildAdvantageCard from "./ChildAdvantageCard.astro";
+---
+
+<section class="section">
+    <div class="section-container max-w-4xl w-full">
+        <div class="flex-center flex-col mb-8">
+            <h2 class="h-secondary max-w-3xl w-full">
+                Почему селфи-зеркало лучше обычной фотосъемки?
+            </h2>
+            <p class="paragraph">
+                Селфи-зеркало — это не просто альтернатива фотографу, это
+                интерактивное развлечение, которое делает ваше мероприятие
+                незабываемым
+            </p>
+        </div>
+        <AdvantageCardGroup />
+        <ChildAdvantageCard />
+        <AdvantageCardGeneral />
+    </div>
+</section>

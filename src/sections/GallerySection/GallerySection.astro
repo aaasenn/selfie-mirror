@@ -1,0 +1,66 @@
+---
+interface Photo {
+    alt: string;
+    link: string;
+    title: string;
+}
+const photos = [
+    {
+        alt: "корпоратив",
+        title: "корпоратив",
+        link: "https://sun9-11.userapi.com/s/v1/ig2/L9jBATGiajmnfoNab_A5hhAvW9J5jrx6Jr-RdjhevsnJBTwBrbWbBIj8jAApI84SLSRZQ-_7QEHttG7z1LnuUi10.jpg?quality=95&as=32x48,48x71,72x107,108x161,160x238,240x357,360x535,480x714,540x803,640x952,720x1071,1080x1606,1240x1844&from=bu&cs=1240x0",
+    },
+    {
+        link: "https://sun9-24.userapi.com/s/v1/ig2/Ll_dyJ1FyT0tbW2nfE2n7JrnJF8FxNH8ruVYAyYxzSQOoA11QR5B-4H8e7xSYQnypOm1X7xfMbD3UZdGK6qknGJk.jpg?quality=95&as=32x48,48x71,72x107,108x161,160x238,240x357,360x535,480x714,540x803,640x952,720x1071,1080x1606,1240x1844&from=bu&cs=1240x0",
+        alt: "8 марта",
+        title: "8 марта",
+    },
+    {
+        link: "https://sun9-22.userapi.com/s/v1/ig1/MVWH-vVlfoTgtcWk5QVrh-qRoZhD28nIhq50AAigDkNJ636wgHfXePFIc65PMlFdSXsvIXYY.jpg?quality=96&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x854,720x961,1080x1441,1280x1708,1440x1921,1535x2048&from=bu&cs=1535x0",
+        alt: "время сделать селфи",
+        title: "время сделать селфи",
+    },
+    {
+        alt: "селфи-будка",
+        title: "селфи-будка",
+        link: "https://sun9-72.userapi.com/s/v1/ig2/tKMDCE6b8x0xXZwxDdRoipFaiG2hAtfMvJjgGw43y4W_2kHhOTiH6zSb4-uka59lfVS3cup0ONYhu0HYKi6P1_x1.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0",
+    },
+    {
+        link: "https://sun9-65.userapi.com/s/v1/ig2/UPBEVtY1qjndZ5bR7syim4fBT20kOu4eU_2ndveAArA5XVgQu411sdCuX6g_elIfCjtONn8EWDdxWrTj4U5TKGHP.jpg?quality=95&as=32x48,48x71,72x107,108x161,160x238,240x357,360x535,480x714,540x803,640x952,720x1071,1080x1606,1240x1844&from=bu&cs=1240x0",
+        alt: "Эмма",
+        title: "Эмма",
+    },
+    {
+        link: "https://sun9-8.userapi.com/s/v1/ig2/1LRT6n_5Ssx0kcntOIiWQYdD2plhS_hJMPsoSA3STnjDdEWM1ZRJLRJESi6TrDjg_AfmkMCu2_SVZXrWPjnD6UoS.jpg?quality=95&as=32x48,48x71,72x107,108x161,160x238,240x357,360x535,480x714,540x803,640x952,720x1071,1080x1606,1240x1844&from=bu&cs=1240x0",
+        alt: "свадьба",
+        title: "свадьба",
+    },
+];
+---
+
+<section class="section secondary-gradient">
+    <div class="section-container max-w-4xl w-full">
+        <h2 class="h-secondary">Галерея наших работ</h2>
+        <p class="paragraph mb-8">
+            Посмотрите, как селфи-зеркала украшают различные мероприятия и
+            радуют гостей
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {
+                photos.map((photo, index) => (
+                    <div class="group relative cursor-pointer hover:scale-105 transform:scale duration-300">
+                        <div class="absolute inset-0 rounded-2xl bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        <div class="absolute w-full h-full flex items-end p-4 bg-transparent text-l font-semibold text-transparent group-hover:text-white duration-300">
+                            {photo.title}
+                        </div>
+                        <img
+                            class="w-full h-full aspect-square rounded-2xl object-cover"
+                            alt={photo.alt}
+                            src={photo.link}
+                        />
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>
