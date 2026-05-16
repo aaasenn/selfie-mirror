@@ -24,12 +24,12 @@ const getField = (formData: FormData, name: string) => {
   return typeof value === "string" ? value.trim() : "";
 };
 
-export const POST: APIRoute = async ({ request }) => {
-  const resendApiKey = import.meta.env.RESEND_API_KEY;
-  const toEmail = import.meta.env.CONTACT_EMAIL;
-  const fromEmail = import.meta.env.RESEND_FROM;
+const resend = new Resend(import.meta.env.RESEND_API_KEY);
+const toEmail = import.meta.env.CONTACT_EMAIL;
+const fromEmail = import.meta.env.RESEND_FROM;
 
-  if (!resendApiKey || !toEmail || !fromEmail) {
+export const POST: APIRoute = async ({ request }) => {
+  if (!toEmail || !fromEmail) {
     return json(
       { message: "Email settings are not configured on the server." },
       500,
@@ -45,7 +45,6 @@ export const POST: APIRoute = async ({ request }) => {
     return json({ message: "Заполните все поля формы." }, 400);
   }
 
-  const resend = new Resend(resendApiKey);
   const subject = `Новая заявка: ${eventName}`;
   const text = [
     "Новая заявка с сайта Selfie Mirror",
