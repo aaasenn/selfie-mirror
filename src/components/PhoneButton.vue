@@ -4,6 +4,6 @@ import Button from "./Button.vue";
 
 <template>
     <Button text="" variant="secondary">
-        <a href="tel:+79817200241">+7 (981) 720-02-41</a>
+        <a href="tel:+79817200241">Позвонить</a>
     </Button>
 </template>

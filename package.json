@@ -20,6 +20,7 @@
     "vue": "^3.5.29"
   },
   "devDependencies": {
+    "@astrojs/netlify": "^6.4.1",
     "vite-plugin-qrcode": "^0.3.0"
   }
 }
