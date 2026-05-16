@@ -1,0 +1,24 @@
+---
+type Props = {
+    videoId: string;
+    title: string;
+    description: string;
+};
+
+const { videoId, title, description } = Astro.props;
+---
+
+<article class="flex flex-col group">
+    <div class="overflow-hidden">
+        <iframe
+            src={videoId}
+            class="w-full h-full aspect-video hover:scale-105 object-cover transition-all duration:300"
+            allowfullscreen="1"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+        ></iframe>
+    </div>
+    <div class="bg-gray-700 p-8 rounded-b-2xl text-left">
+        <h3 class="text-xl font-semibold mb-4">{title}</h3>
+        <p class="text-gray-400">{description}</p>
+    </div>
+</article>

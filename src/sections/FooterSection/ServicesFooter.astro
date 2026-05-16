@@ -1,0 +1,21 @@
+---
+const services = [
+    "Аренда селфи-зеркал",
+    "Свадебные мероприятия",
+    "Корпоративные события",
+    "Дни рождения",
+    "Выпускные вечера",
+    "Промо-акции",
+];
+---
+
+<article class="text-left">
+    <h4 class="text-xl text-white font-semibold mb-4">Услуги</h4>
+    <ul>
+        {
+            services.map((service) => (
+                <li class="text-gray-400 mb-2">{service}</li>
+            ))
+        }
+    </ul>
+</article>

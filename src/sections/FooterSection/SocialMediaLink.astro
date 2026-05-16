@@ -1,0 +1,14 @@
+---
+import { Icon } from "astro-icon/components";
+
+type Props = {
+    iconName: string;
+    href: string;
+};
+
+const { iconName, href } = Astro.props;
+---
+
+<a href={href} class="rounded-full primary-gradient p-3">
+    <Icon name={iconName} color="white" size="24" />
+</a>

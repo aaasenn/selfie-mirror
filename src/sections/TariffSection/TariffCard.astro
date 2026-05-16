@@ -1,0 +1,55 @@
+---
+type Props = {
+    time: string;
+    price: number;
+    list: string[];
+    primary?: boolean;
+};
+
+const { time, price, list, primary = false } = Astro.props;
+---
+
+<article
+    class:list={[
+        "relative",
+        "p-8",
+        "rounded-3xl",
+        { "primary-gradient": primary },
+        { "bg-white": !primary },
+        { "text-white": primary },
+        "border-2",
+        "border-gray-200",
+        "transition-all",
+        "duration-300",
+        "hover:shadow-2xl",
+    ]}
+>
+    {
+        primary && (
+            <div class="absolute inset -top-8 w-fit h-fit px-8 py-4 bg-yellow-300 rounded-full text-black font-semibold">
+                Популярный выбор
+            </div>
+        )
+    }
+    <h3 class:list={["h-secondary", { "text-white": primary }]}>{time}</h3>
+    <p class="text-3xl font-semibold mb-8">{price} ₽</p>
+    <ul class="mb-8">
+        {
+            list.map((item) => (
+                <li class="flex gap-3 mb-4">
+                    <div>✅</div>
+                    <div>{item}</div>
+                </li>
+            ))
+        }
+    </ul>
+    <button
+        class:list={[
+            "btn",
+            { "text-white": !primary },
+            { "primary-gradient": !primary },
+            { "bg-white": primary },
+            { "text-purple-500": primary },
+        ]}>Забронировать</button
+    >
+</article>

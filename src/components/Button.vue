@@ -23,6 +23,7 @@ const handleClick = () => {
         >
             <span :class="props.variant === 'secondary' ? '' : 'animate-pulse'">
                 {{ props.text }}
+                <slot />
             </span>
         </button>
     </div>

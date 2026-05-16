@@ -1,0 +1,25 @@
+---
+import DescriptionAndMedia from "./DescriptionAndMedia.astro";
+import ContactsFooter from "./ContactsFooter.astro";
+import WorkingHoursFooter from "./WorkingHoursFooter.astro";
+import ServicesFooter from "./ServicesFooter.astro";
+---
+
+<footer class="section bg-gray-700">
+    <div class="section-container">
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12"
+        >
+            <DescriptionAndMedia />
+            <ContactsFooter />
+            <WorkingHoursFooter />
+            <ServicesFooter />
+        </div>
+        <div class="border border-gray-400 w-full"></div>
+        <p class="text-gray-400">
+            <small
+                >© <time datetime="2026">2026</time> Селфи-Зеркало. Все права защищены.</small
+            >
+        </p>
+    </div>
+</footer>

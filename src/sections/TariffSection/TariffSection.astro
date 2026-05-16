@@ -1,0 +1,63 @@
+---
+import TariffCard from "./TariffCard.astro";
+
+const cheapTariffFeatures = [
+    "Неограниченное количество фото",
+    "Моментальная печать",
+    "Доставка и установка",
+    "Настройка под мероприятие",
+    "2 дизайна фоторамок",
+    "Онлайн-галерея фото",
+    "Техподдержка",
+];
+
+const popularTariffFeatures = [
+    "Все из пакета 2 часа",
+    "Расширенное время работы",
+    "Больше времени для гостей",
+    "5 дизайнов фоторамок",
+    "Видео-поздравление",
+    "SMS-рассылка фото гостям",
+    "Фотокнига в подарок",
+    "Приоритетная поддержка",
+];
+
+const expensiveTariffFeatures = [
+    "Все из пакета 5 часов",
+    "Максимальное время работы",
+    "Идеально для больших событий",
+    "Безлимитные дизайны",
+    "Профессиональный монтаж видео",
+    "Дополнительный реквизит",
+    "Instagram Stories в реальном времени",
+    "Персональный координатор",
+];
+---
+
+<section class="section">
+    <div class="section-container w-full">
+        <h2 class="h-secondary">Тарифы на аренду</h2>
+        <p class="paragraph mb-8">
+            Выберите подходящий пакет в зависимости от продолжительности вашего
+            мероприятия
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <TariffCard
+                time="2 часа"
+                price={15000}
+                list={cheapTariffFeatures}
+            />
+            <TariffCard
+                time="5 часов"
+                price={25000}
+                list={popularTariffFeatures}
+                primary
+            />
+            <TariffCard
+                time="8 часов"
+                price={35000}
+                list={expensiveTariffFeatures}
+            />
+        </div>
+    </div>
+</section>

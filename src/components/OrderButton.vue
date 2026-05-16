@@ -2,7 +2,6 @@
 import Button from "./Button.vue";
 
 const handleClick = () => {
-    console.log("enter");
     document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
     document.querySelector<HTMLInputElement>("#contactname")?.focus();
 };

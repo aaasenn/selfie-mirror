@@ -45,11 +45,11 @@
     }
 
     .section-container {
-        @apply container flex justify-center items-center flex-col text-center border border-cyan-300;
+        @apply container flex justify-center items-center flex-col text-center;
     }
 
     .h-secondary {
-        @apply md:text-5xl font-bold mb-4 text-gray-900;
+        @apply md:text-5xl font-bold mb-4;
     }
 
     .paragraph {
